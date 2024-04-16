@@ -28,7 +28,7 @@ This is a solution to the [Order summary component challenge on Frontend Mentor]
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/BiancaAdS/order-summary-component)
-- Live Site URL: [Live site URL]()
+- Live Site URL: [Live site URL](https://order-summary-component-lime-two.vercel.app/)
 
 ## My process
 
