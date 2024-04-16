@@ -1,7 +1,168 @@
+:root {
+  --primary-white: #ffffff;
+  --primary-pale-blue-color: hsl(225, 100%, 94%);
+  --primary-bright-blue-color: hsl(245, 75%, 52%);
+  --neutral-very-pale-blue-color: hsl(225, 100%, 98%);
+  --neutral-desaturated-blue-color: hsl(224, 23%, 55%);
+  --neutral-dark-blue-color: hsl(223, 47%, 23%);
+}
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: url(../assets/images/pattern-background-desktop.svg) no-repeat;
+  background-size: contain;
+  background-color: var(--primary-pale-blue-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content-box {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 452px;
+}
+
+.box-component {
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: var(--primary-white);
+
+  text-align: center;
+
+  border-radius: 12px;
+}
+
+.box-component img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.box-info {
+  padding: 26px;
+}
+
+.box-info h1 {
+  color: var(--neutral-dark-blue-color);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.box-info p {
+  font-size: 16px;
+  color: var(--neutral-desaturated-blue-color);
+}
+
+.box-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin: 22px 0;
+  background-color: var(--neutral-very-pale-blue-color);
+  border-radius: 8px;
+  height: 85px;
+  width: 100%;
+}
+
+.box-plan img {
+  width: 15%;
+}
+
+.box-info-plan {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--neutral-dark-blue-color);
+}
+
+.box-info-plan b {
+  color: var(--neutral-dark-blue-color);
+}
+
+.link-change {
+  color: var(--primary-bright-blue-color);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline var(--neutral-dark-blue-color);
+}
+
+.link-change:hover {
+  filter: brightness(2.4);
+  text-decoration: none;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 12px 0;
+}
+
+.btn-box button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-proceed {
+  margin-bottom: 18px;
+  height: 40px;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 14px;
+
+  background-color: var(--primary-bright-blue-color);
+  border-color: transparent;
+  color: var(--neutral-very-pale-blue-color);
+
+  box-shadow: 0px 5px 15px var(--neutral-desaturated-blue-color);
+}
+
+.btn-proceed:hover {
+  filter: brightness(2.4);
+  color: var(--neutral-desaturated-blue-color);
+}
+
+.btn-cancel {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+
+  color: var(--neutral-desaturated-blue-color);
+  font-weight: 700;
+}
+
+.btn-cancel:hover {
+  color: var(--neutral-dark-blue-color);
 }
 
 .attribution {
@@ -11,4 +172,16 @@
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background: url(../assets/images/pattern-background-mobile.svg) no-repeat;
+    background-size: contain;
+    background-color: var(--primary-pale-blue-color);
+  }
+
+  .content-box {
+    width: 100%;
+  }
 }
